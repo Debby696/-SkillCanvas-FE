@@ -1,0 +1,271 @@
+*::befpre, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root {
+    --clr-blue-100: hsl(205, 63%, 48%);
+    --clr-slate-100: darkslategray;
+}
+
+/* First Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+}
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.hero-content {
+    position: relative;
+    margin-top: 13rem;
+    margin-bottom: 3rem;
+}
+.hero-text-container {
+    max-width: max-content;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.hero-text-name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.hero-text-position {
+    font-size: 1.5rem;
+}
+.hero-btn-container {
+    padding-top: 1rem;
+}
+.btn {
+    text-transform: capitalize;
+    background: transparent;
+    color: black;
+    padding: 0.375rem 0.75rem;
+    /* padding: 0.75rem;   */
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    transition: all 0.3s linear;
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 3rem;
+    /* margin: 0.5rem */
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.btn-blue {
+    border: none;
+    background-color: hsl(205, 63%, 48%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+.btn-outline {
+    border: 2px solid hsl(205, 63%, 48%);
+    background-color: white;
+    color: hsl(205, 63%, 48%);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+.section-titles {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: darkslategray;
+}
+/* Personal Info Section Styles */
+.personal-info-section {
+    /*
+    padding-left: 2rem;
+    padding-right: 2rem;
+    */
+    padding-top: 2rem;
+}
+.sub-info-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.sub-info-title {
+    color: lightgray;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.sub-info-label {
+    color: darkslategray;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.contacts-container {
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+}
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.contacts-wrapper a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--clr-blue-100);
+    text-decoration: none;
+    padding: 0.2rem 0;
+}
+
+/* General Padding */
+.gen-pad {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Social Section */
+.socials-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin: 1rem 0;
+}
+.contact-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* Second Section Styles */
+.second-section-title {}
+
+.second-section-text {
+    font-size: 1.1rem;
+}
+
+/* Third Style Section */
+.third-section h4 {
+    margin-top: 1rem;
+    display: block;
+}
+.skill-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+/* Fourth Style Section */
+.fourth-section h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.cert-item-wrapper {
+    margin: 0.75rem
+}
+
+/* Fifth Section */
+.experience-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    /*justify-content: space-between;*/
+}
+
+/* Footer */
+footer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: var(--clr-slate-100);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+footer p {
+    /*font-size: 1rem;*/
+    padding-left: 2rem;
+    font-weight: 600;
+    color: var(--clr-slate-100);
+}
+.show-mobile-only {
+    display: block;
+}
+.show-desktop-only {
+    display: none;
+}
+
+/*
+@media screen {
+
+}*/
+
+
+/* Responsive section for desktops */
+@media (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        padding: 0.5rem 1rem;
+    }
+    .col-span-1 {
+        grid-column: span 1 / span 1;
+    }
+    .col-span-2 {
+        grid-column: span 2 / span 2;
+    }
+    .show-desktop-only {
+        display: block;
+    }
+    .show-mobile-only {
+        display: none;
+    }
+
+    /* First Section */
+    .hero-content {
+        padding: 5rem 0;
+    }
+    .second-section {
+        margin-top: 3rem;
+    }
+    .second-section-text {
+        font-size: 1.5rem;
+    }
+    .third-section {
+        margin-top: 4rem;
+    }
+    .fourth-section {
+        margin-top: 3rem;
+    }
+    .personal-info-section {
+        padding-left: 0;
+    }
+    footer {
+        padding-bottom: 0.5rem;
+    }
+    footer p {
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+    .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 3rem;
+        outline: none;
+        /*font-size: 1rem;*/
+        font-weight: 700;
+    }
+    .btn-blue {
+        font-weight: 600;
+        font-size: 0.75rem;
+    }
+    .btn-outline {
+        font-weight: 600;
+        font-size: 0.75rem;
+    }
+}
